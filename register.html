@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="register.css">
+ <title>Signin</title>
+
+</head>
+<body>
+  <img src="Images/General/Golden_Gate_Bridge_at_sunset_1.jpg" class="bgi">
+  <div class="reg-box">
+  <h1>Signin</h1>
+  <form action="/submit_registration" method="post" class="signin">
+     <label for="email">Email:</label>
+    <input type="email" id="email" value placeholder="Email or Phone" required><br>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" placeholder="Password"required><br>
+    
+   <button>Signin</button>
+  </form>
+  <p class="bottom-para"> New to the Page ? <a href="Signup.html">Signup</a></p>
+
+</div>
+<script src="signin.bundle2.js"></script>
+<script>
+  // just for the aesthetic shit cz backend ni ho pa rha :-)
+  const passwordInput = document.getElementById('password');
+
+  passwordInput.addEventListener('focus', () => {
+      passwordInput.setAttribute('placeholder', 'Password must contain atleast 6 characters ');
+  });
+
+  passwordInput.addEventListener('blur', () => {
+      passwordInput.setAttribute('placeholder', 'Password');
+  });
+</script>
+</body>
+</html>
