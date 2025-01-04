@@ -44,10 +44,10 @@
               <img src="Images/General/LoginLogo2.jpg" class="LoginIcon">
             </div>
             <div class="login">
-              <a class="anch1">Signp/login</a> 
+              <a class="anch1" href="register.html">Signup/login</a> 
             </div>   
           </div>
-         
+         <a href="TravelBucket.html">
         <div class="wishlist1">
           <button class="Wishlist">
             <img src="Images/General/dt-icon-heart.svg" class="wishlist-logo">
@@ -55,6 +55,7 @@
 
           </button>
         </div>
+      </a>
          
         </div>
       </div>
@@ -95,7 +96,7 @@
       
               <div class="div5">
                 <div class="div6">
-                <a href="Wishlisted.html" target="_blank" class="anch3" data-Name="Sydney" onclick=" inc();">
+                <a  target="_blank" class="anch3" data-Name="Sydney" onclick=" inc();">
                     <img src="Images/General/GreenWishlist.jpeg" class="heart1">
                 </a>
               </div>
@@ -126,7 +127,7 @@
     
             <div class="div5">
               <div class="div6">
-              <a href="Wishlisted.html" target="_blank" class="anch3" data-Name="Melbourne" onclick=" inc();">
+              <a target="_blank" class="anch3" data-Name="Melbourne" onclick=" inc();">
                   <img src="Images/General/GreenWishlist.jpeg" class="heart1">
               </a>
             </div>
@@ -158,7 +159,7 @@
         
           <div class="div5">
             <div class="div6">
-            <a href="Wishlisted.html" target="_blank" class="anch3" data-Name="Queenstown" onclick=" inc();">
+            <a  target="_blank" class="anch3" data-Name="Queenstown" onclick=" inc();">
                 <img src="Images/General/GreenWishlist.jpeg" class="heart1">
             </a>
           </div>
@@ -189,7 +190,7 @@
     
         <div class="div5">
           <div class="div6">
-          <a href="Wishlisted.html" target="_blank" class="anch3"  data-Name="Wellington" onclick=" inc();">
+          <a  target="_blank" class="anch3"  data-Name="Wellington" onclick=" inc();">
               <img src="Images/General/GreenWishlist.jpeg" class="heart1">
           </a>
         </div>
@@ -227,7 +228,7 @@
       
               <div class="div5">
                 <div class="div6">
-                <a href="Wishlisted.html" target="_blank" class="anch3" data-Name="Leh(Ladakh)" onclick=" inc();">
+                <a  target="_blank" class="anch3" data-Name="Leh(Ladakh)" onclick=" inc();">
                     <img src="Images/General/GreenWishlist.jpeg" class="heart1">
                 </a>
               </div>
@@ -258,7 +259,7 @@
     
             <div class="div5">
               <div class="div6">
-              <a href="Wishlisted.html" target="_blank" class="anch3" data-Name="Azerbaijan" onclick=" inc();">
+              <a  target="_blank" class="anch3" data-Name="Azerbaijan" onclick=" inc();">
                   <img src="Images/General/GreenWishlist.jpeg" class="heart1">
               </a>
             </div>
@@ -290,7 +291,7 @@
         
           <div class="div5">
             <div class="div6">
-            <a href="Wishlisted.html" target="_blank" class="anch3" data-Name="Maldives" onclick=" inc();">
+            <a  target="_blank" class="anch3" data-Name="Maldives" onclick=" inc();">
                 <img src="Images/General/GreenWishlist.jpeg" class="heart1">
             </a>
           </div>
@@ -321,7 +322,7 @@
     
         <div class="div5">
           <div class="div6">
-          <a href="Wishlisted.html" target="_blank" class="anch3" data-Name="TajMahal"onclick=" inc();">
+          <a target="_blank" class="anch3" data-Name="TajMahal"onclick=" inc();">
               <img src="Images/General/GreenWishlist.jpeg" class="heart1">
           </a>
         </div>
@@ -360,7 +361,7 @@
       
               <div class="div5">
                 <div class="div6">
-                <a href="Wishlisted.html" target="_blank" class="anch3" data-Name="Amsterdam" onclick=" inc();">
+                <a  target="_blank" class="anch3" data-Name="Amsterdam" onclick=" inc();">
                     <img src="Images/General/GreenWishlist.jpeg" class="heart1">
                 </a>
               </div>
@@ -391,7 +392,7 @@
     
             <div class="div5">
               <div class="div6">
-              <a href="Wishlisted.html" target="_blank" class="anch3" data-Name="Paris" onclick=" inc();">
+              <a  target="_blank" class="anch3" data-Name="Paris" onclick=" inc();">
                   <img src="Images/General/GreenWishlist.jpeg" class="heart1">
               </a>
             </div>
@@ -423,7 +424,7 @@
         
           <div class="div5">
             <div class="div6">
-            <a href="Wishlisted.html" target="_blank" class="anch3" data-Name="Dublin" onclick=" inc();" >
+            <a  target="_blank" class="anch3" data-Name="Dublin" onclick=" inc();" >
                 <img src="Images/General/GreenWishlist.jpeg" class="heart1">
             </a>
           </div>
@@ -454,7 +455,7 @@
     
         <div class="div5">
           <div class="div6">
-          <a href="Wishlisted.html" target="_blank" class="anch3" data-Name='London' onclick=" inc();">
+          <a target="_blank"  class="anch3  preview-anchor1" data-Name='London' onclick=" inc();">
               <img src="Images/General/GreenWishlist.jpeg" class="heart1">
           </a>
         </div>
@@ -476,15 +477,13 @@
         
 </div>  
 <script>
-  var previewAnchors = document.querySelectorAll('.preview-anchor');
+  var previewAnchors = document.querySelectorAll('.anch2');
   previewAnchors.forEach(function(anchor){
     anchor.addEventListener('click', function(e){
       e.preventDefault();
       var name = anchor.getAttribute('data-Name');
       localStorage.setItem('locationName', name);
       window.location.href = 'Preview.html';
-
-  
     });
   });
 
@@ -492,9 +491,24 @@
   function inc() {
     var quantityElement = document.querySelector('.Quantity');
     var currentQuantity = parseInt(quantityElement.innerHTML, 10);
-    quantityElement.innerHTML = currentQuantity + 1;}
+    quantityElement.innerHTML = currentQuantity + 1;
+  }
 
+
+
+    var previewAnchors1 = document.querySelectorAll('.anch3');
+  previewAnchors1.forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      e.preventDefault();
+      var name = anchor.getAttribute('data-Name');
+      localStorage.setItem('locationName1', name);
+      
+     
+      
+    });
+  });
 </script>
 <script  type="module"  src="scripts/mainpreview.js"></script>
+<script  type="module"  src="scripts/tv.js"></script>
 </body>
 </html>
