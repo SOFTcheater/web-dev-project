@@ -129,5 +129,13 @@ body{
 
 </div>
 <script type="module" src="scripts/mainpreview.js"></script>
+<script>
+  function inc() {
+    var quantityElement = document.querySelector('.Quantity');
+    var currentQuantity = parseInt(quantityElement.innerHTML, 10);
+    quantityElement.innerHTML = currentQuantity + 1;
+  }
+
+</script>
 </body>
 </html>
